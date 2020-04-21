@@ -4,8 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backGround"
+    android:background="#006064"
     tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#9F000000"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -14,15 +21,16 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/view">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
-            tools:srcCompat="@tools:sample/avatars"
-            android:layout_marginTop="32dp"
-            android:contentDescription="TODO" />
+            android:contentDescription="TODO"
+            android:src="@drawable/avatar"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -30,7 +38,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
             android:fontFamily="cursive"
-            android:text="Ajibola Odujole"
+            android:text="@string/name"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -40,7 +48,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
             android:fontFamily="cursive"
-            android:text="Mobile Developer"
+            android:text="@string/profession"
             android:textSize="16sp" />
 
         <TextView
@@ -49,20 +57,19 @@
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
             android:fontFamily="cursive"
-            android:text="I'm warmed of mobile technologies\nIdeas maker, curious and nature lover."
+            android:text="@string/bioString"
             android:textSize="12sp" />
 
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
         android:orientation="vertical"
-        android:padding="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
@@ -73,37 +80,37 @@
 
             <ImageView
                 android:id="@+id/playstore"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="6dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:src="@drawable/playstore" />
 
             <ImageView
                 android:id="@+id/github"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="6dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:src="@drawable/github" />
 
             <ImageView
                 android:id="@+id/bitbucket"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="6dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:src="@drawable/bitbucket" />
 
             <ImageView
                 android:id="@+id/facebook"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="6dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:src="@drawable/facebook" />
         </LinearLayout>
 
@@ -114,37 +121,37 @@
 
             <ImageView
                 android:id="@+id/twitter"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="6dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:src="@drawable/twitter" />
 
             <ImageView
                 android:id="@+id/instagram"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="6dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:src="@drawable/instagram" />
 
             <ImageView
                 android:id="@+id/googlePlus"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="6dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:src="@drawable/googleplus" />
 
             <ImageView
                 android:id="@+id/youtube"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="6dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:src="@drawable/youtube" />
         </LinearLayout>
 
@@ -155,37 +162,37 @@
 
             <ImageView
                 android:id="@+id/dribble"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="6dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:src="@drawable/dribble" />
 
             <ImageView
                 android:id="@+id/linkedin"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="6dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:src="@drawable/linkedin" />
 
             <ImageView
                 android:id="@+id/email"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="6dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:src="@drawable/mail" />
 
             <ImageView
                 android:id="@+id/whatsapp"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="6dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:src="@drawable/whatsapp" />
         </LinearLayout>
 
@@ -196,37 +203,37 @@
 
             <ImageView
                 android:id="@+id/skype"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="6dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:src="@drawable/skype" />
 
             <ImageView
                 android:id="@+id/google"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="6dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:src="@drawable/google" />
 
             <ImageView
                 android:id="@+id/android"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="6dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:src="@drawable/android" />
 
             <ImageView
                 android:id="@+id/website"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="6dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:src="@drawable/earth" />
         </LinearLayout>
 

@@ -1,5 +1,7 @@
 package ng.com.ajsprojects.startngkotlintask3
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.Toast
@@ -13,84 +15,139 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val facebook : ImageView = findViewById(R.id.facebook)
         facebook.setOnClickListener{
-            Toast.makeText(this@MainActivity, "You Clicked Me", Toast.LENGTH_SHORT).show()
+            intent = Intent(Intent.ACTION_VIEW)
+            intent.setData(Uri.parse("https://www.facebook.com/"))
+            startActivity(intent)
         }
+        
 
-        val twitter : ImageView = findViewById(R.id.twitter)
         twitter.setOnClickListener{
-            Toast.makeText(this@MainActivity, "You Clicked Me", Toast.LENGTH_SHORT).show()
+            intent = Intent(Intent.ACTION_VIEW)
+            intent.setData(Uri.parse("https://www.twitter.com/aj_joules"))
+            startActivity(intent)
         }
 
-        val instagram : ImageView = findViewById(R.id.instagram)
         instagram.setOnClickListener{
-            Toast.makeText(this@MainActivity, "You Clicked Me", Toast.LENGTH_SHORT).show()
+            intent = Intent(Intent.ACTION_VIEW)
+            intent.setData(Uri.parse("https://www.instagram.com/aj_joules"))
+            startActivity(intent)
         }
 
-        val whatsapp : ImageView = findViewById(R.id.whatsapp)
         whatsapp.setOnClickListener{
-            Toast.makeText(this@MainActivity, "You Clicked Me", Toast.LENGTH_SHORT).show()
+            intent = Intent(Intent.ACTION_VIEW)
+            intent.setData(Uri.parse("https://www.whatsapp.com/08183543583"))
+            startActivity(intent)
         }
 
-        val bitbucket : ImageView = findViewById(R.id.bitbucket)
         bitbucket.setOnClickListener{
-            Toast.makeText(this@MainActivity, "You Clicked Me", Toast.LENGTH_SHORT).show()
+            intent = Intent(Intent.ACTION_VIEW)
+            intent.setData(Uri.parse("https://www.bitbucket.com/joules007"))
+            startActivity(intent)
+
+            intent= Intent(Intent.ACTION_VIEW, Uri.parse("https://www.bitbucket.com/joules007"))
+            startActivity(intent)
         }
 
-        val google : ImageView = findViewById(R.id.google)
         google.setOnClickListener{
-            Toast.makeText(this@MainActivity, "You Clicked Me", Toast.LENGTH_SHORT).show()
+            intent = Intent(Intent.ACTION_VIEW)
+            intent.setData(Uri.parse("https://www.google.com/joules007"))
+            startActivity(intent)
+
+            intent= Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/joules007"))
+            startActivity(intent)
         }
 
-        val googlePlus : ImageView = findViewById(R.id.googlePlus)
         googlePlus.setOnClickListener{
-            Toast.makeText(this@MainActivity, "You Clicked Me", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@MainActivity, "Google plus has been discontinued", Toast.LENGTH_SHORT).show()
         }
 
-        val github : ImageView = findViewById(R.id.github)
         github.setOnClickListener{
-            Toast.makeText(this@MainActivity, "You Clicked Me", Toast.LENGTH_SHORT).show()
+            intent = Intent(Intent.ACTION_VIEW)
+            intent.setData(Uri.parse("https://www.github.com/joules007"))
+            startActivity(intent)
         }
 
-        val skype : ImageView = findViewById(R.id.skype)
         skype.setOnClickListener{
-            Toast.makeText(this@MainActivity, "You Clicked Me", Toast.LENGTH_SHORT).show()
+            intent = Intent(Intent.ACTION_VIEW)
+            intent.setData(Uri.parse("https://www.skype.com/joules007"))
+            startActivity(intent)
+
+            intent= Intent(Intent.ACTION_VIEW, Uri.parse("https://www.skype.com/joules007"))
+            startActivity(intent)
         }
 
-        val youtube : ImageView = findViewById(R.id.youtube)
         youtube.setOnClickListener{
-            Toast.makeText(this@MainActivity, "You Clicked Me", Toast.LENGTH_SHORT).show()
+            intent = Intent(Intent.ACTION_VIEW)
+            intent.setData(Uri.parse("https://www.youtube.com/"))
+            startActivity(intent)
+
+            intent= Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/"))
+            startActivity(intent)
         }
 
-        val mail : ImageView = findViewById(R.id.email)
-        mail.setOnClickListener{
-            Toast.makeText(this@MainActivity, "You Clicked Me", Toast.LENGTH_SHORT).show()
+        email.setOnClickListener{
+            val intent = Intent(Intent.ACTION_SENDTO)
+            intent.data = Uri.parse("mailto:youremail@gmail.com") // only email apps should handle this
+            intent.putExtra(Intent.EXTRA_EMAIL, "")
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Feedback")
+            startActivity(Intent.createChooser(intent, "Please Select Email App"))
         }
 
-        val playstore : ImageView = findViewById(R.id.playstore)
         playstore.setOnClickListener{
-            Toast.makeText(this@MainActivity, "You Clicked Me", Toast.LENGTH_SHORT).show()
+            intent = Intent(Intent.ACTION_VIEW)
+            intent.setData(Uri.parse("https://www.play.google.com/"))
+            startActivity(intent)
+
+            intent= Intent(Intent.ACTION_VIEW, Uri.parse("https://www.play.google.com/"))
+            startActivity(intent)
         }
 
-        val website : ImageView = findViewById(R.id.website)
         website.setOnClickListener{
-            Toast.makeText(this@MainActivity, "You Clicked Me", Toast.LENGTH_SHORT).show()
+            intent = Intent(Intent.ACTION_VIEW)
+            intent.setData(Uri.parse("https://www.ajsprojects.com.ng/"))
+            startActivity(intent)
+
+            intent= Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ajsprojects.com.ng/"))
+            startActivity(intent)
         }
 
-        val dribble : ImageView = findViewById(R.id.dribble)
         dribble.setOnClickListener{
-            Toast.makeText(this@MainActivity, "You Clicked Me", Toast.LENGTH_SHORT).show()
+            intent = Intent(Intent.ACTION_VIEW)
+            intent.setData(Uri.parse("https://www.dribble.com/Joules007"))
+            startActivity(intent)
+
+            intent= Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dribble.com/Joules007"))
+            startActivity(intent)
         }
-        val android : ImageView = findViewById(R.id.android)
         android.setOnClickListener{
-            Toast.makeText(this@MainActivity, "You Clicked Me", Toast.LENGTH_SHORT).show()
+            intent = Intent(Intent.ACTION_VIEW)
+            intent.setData(Uri.parse("https://www.ajsprojects.com.ng/"))
+            startActivity(intent)
+
+            intent= Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ajsprojects.com.ng/"))
+            startActivity(intent)
         }
 
-        val linkedin : ImageView = findViewById(R.id.linkedin)
         linkedin.setOnClickListener{
-            Toast.makeText(this@MainActivity, "You Clicked Me", Toast.LENGTH_SHORT).show()
+            intent = Intent(Intent.ACTION_VIEW)
+            intent.setData(Uri.parse("https://www.ajsprojects.com.ng/"))
+            startActivity(intent)
+
         }
+
+       /* Explicit Intent: This intent satisfies the request within the application component. It takes the fully qualified class name of activities or services that we want to start.
+
+        intent = Intent(applicationContext, SecondActivity::class.java)
+        startActivity(intent)
+        Implicit Intent: This intent does not specify the component name. It invokes the component of another app to handle it.
+
+        intent = Intent(Intent.ACTION_VIEW)
+        intent.setData(Uri.parse("https://www.javatpoint.com/"))
+        startActivity(intent)
+
+        intent= Intent(Intent.ACTION_VIEW, Uri.parse("https://www.javatpoint.com/"))
+        startActivity(intent)*/
 
     }
 }
