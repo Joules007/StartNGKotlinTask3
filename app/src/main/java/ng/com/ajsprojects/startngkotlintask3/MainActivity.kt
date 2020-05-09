@@ -4,8 +4,10 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -14,6 +16,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val user = Firebase.auth.currentUser?.let{
+            val name = user.displayName
+            val email = user.email
+            val photoUrl = user.photoUrl
+
+            val emailVerified = user.isEmailVerified
+            val uid = user.uid
+        }
 
         facebook.setOnClickListener{
             intent = Intent(Intent.ACTION_VIEW)
@@ -150,4 +161,5 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)*/
 
     }
+
 }

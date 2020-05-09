@@ -10,7 +10,7 @@
     <View
         android:id="@+id/view"
         android:layout_width="0dp"
-        android:layout_height="70dp"
+        android:layout_height="35dp"
         android:background="#9F000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,8 +20,9 @@
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
         android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view">
 
@@ -29,7 +30,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
-            android:contentDescription="TODO"
+            android:contentDescription="@string/todo"
             android:src="@drawable/avatar"
             app:civ_border_color="#FF000000"
             app:civ_border_width="2dp" />
@@ -70,12 +71,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="64dp"
+        android:layout_marginEnd="32dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/view">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -88,6 +89,7 @@
                 android:layout_height="24dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:contentDescription="TODO"
                 android:src="@drawable/playstore" />
 
             <ImageView
@@ -97,6 +99,7 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:contentDescription="TODO"
                 android:src="@drawable/github" />
 
             <ImageView
@@ -106,7 +109,8 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:src="@drawable/bitbucket" />
+                android:contentDescription="TODO"
+                android:src="@drawable/bitbucket"/>
 
             <ImageView
                 android:id="@+id/facebook"
@@ -115,7 +119,8 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:src="@drawable/facebook" />
+                android:contentDescription="TODO"
+                android:src="@drawable/facebook"/>
         </LinearLayout>
 
         <LinearLayout
@@ -129,6 +134,7 @@
                 android:layout_height="24dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:contentDescription="TODO"
                 android:src="@drawable/twitter" />
 
             <ImageView
@@ -138,6 +144,7 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:contentDescription="@string/todo"
                 android:src="@drawable/instagram" />
 
             <ImageView
@@ -147,6 +154,7 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:contentDescription="TODO"
                 android:src="@drawable/googleplus" />
 
             <ImageView
@@ -156,6 +164,7 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:contentDescription="TODO"
                 android:src="@drawable/youtube" />
         </LinearLayout>
 
@@ -170,6 +179,7 @@
                 android:layout_height="24dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:contentDescription="TODO"
                 android:src="@drawable/dribble" />
 
             <ImageView
@@ -179,6 +189,7 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:contentDescription="TODO"
                 android:src="@drawable/linkedin" />
 
             <ImageView
@@ -188,7 +199,8 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:src="@drawable/mail" />
+                android:contentDescription="TODO"
+                android:src="@drawable/mail"/>
 
             <ImageView
                 android:id="@+id/whatsapp"
@@ -197,6 +209,7 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:contentDescription="TODO"
                 android:src="@drawable/whatsapp" />
         </LinearLayout>
 
@@ -211,7 +224,8 @@
                 android:layout_height="24dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:src="@drawable/skype" />
+                android:contentDescription="TODO"
+                android:src="@drawable/skype"/>
 
             <ImageView
                 android:id="@+id/google"
@@ -220,7 +234,8 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:src="@drawable/google" />
+                android:contentDescription="TODO"
+                android:src="@drawable/google"/>
 
             <ImageView
                 android:id="@+id/android"
@@ -229,7 +244,8 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:src="@drawable/android" />
+                android:contentDescription="TODO"
+                android:src="@drawable/android"/>
 
             <ImageView
                 android:id="@+id/website"
@@ -238,7 +254,8 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:src="@drawable/earth" />
+                android:contentDescription="TODO"
+                android:src="@drawable/earth"/>
         </LinearLayout>
 
     </LinearLayout>
